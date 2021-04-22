@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  padding: 65px 10px 0;
+}
+
+section h2 {
+  padding-bottom: 20px;
+}
+
+.fm-title {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 40px;
+  padding: 30px 10px;
+}
+
+.fm-navbar {
+  position: fixed;
+  z-index: 9;
+  top: 60px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: lightgreen;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.fm-navbar ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.fm-navbar ul li a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.fm-navbar.hide {
+  -webkit-transform: translateY(-260px);
+          transform: translateY(-260px);
+}
+
+.menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: #212121;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #212121;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  -webkit-transform: rotate(45deg) translate(7px, -7px);
+          transform: rotate(45deg) translate(7px, -7px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: rotate(-45deg) translate(7px, 7px);
+          transform: rotate(-45deg) translate(7px, 7px);
+}
+
+@media (min-width: 992px) {
+  .fm-title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fm-title .menu-btn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px 30px;
+    width: 50px;
+    height: 50px;
+  }
+  .fm-navbar {
+    top: 60px;
+    left: -25vw;
+    width: 25vw;
+    max-width: 100%;
+    height: 100vh;
+  }
+  .fm-navbar.hide {
+    -webkit-transform: translatex(25vw);
+            transform: translatex(25vw);
+  }
+  .fm-main-content {
+    margin: auto 25%;
+    width: 60vw;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fm-navbar {
+    top: 60px;
+    left: -17vw;
+    width: 17vw;
+    max-width: 100%;
+    height: 100vh;
+  }
+  .fm-navbar.hide {
+    -webkit-transform: translatex(17vw);
+            transform: translatex(17vw);
+  }
+  .fm-main-content {
+    margin: auto 18%;
+    width: 60vw;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
