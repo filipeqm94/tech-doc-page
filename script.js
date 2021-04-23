@@ -9,22 +9,27 @@ function toggleNavbar() {
   mainContent.classList.toggle("hide");
 }
 
-menuBtn.addEventListener("click", toggleNavbar);
-navLinks.forEach((a) => {
-  a.addEventListener("click", toggleNavbar);
-});
-
-if (document.body.clientWidth >= 992) {
-  menuBtn.classList.add("open");
-}
-
-window.addEventListener("resize", () => {
+function dynamicStyle() {
   if (document.body.clientWidth >= 992) {
     menuBtn.classList.add("open");
     navbar.classList.add("hide");
     mainContent.classList.add("hide");
+
+    navLinks.forEach((a) => {
+      a.removeEventListener("click", toggleNavbar);
+    });
   } else {
     menuBtn.classList.remove("open");
     mainContent.classList.remove("hide");
+
+    navLinks.forEach((a) => {
+      a.addEventListener("click", toggleNavbar);
+    });
   }
-});
+}
+
+menuBtn.addEventListener("click", toggleNavbar);
+
+window.addEventListener("resize", dynamicStyle);
+
+dynamicStyle();
