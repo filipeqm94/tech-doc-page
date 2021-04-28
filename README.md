@@ -12,6 +12,14 @@ The purpose of this project is to apply what I've learn about Reponsive Web Desi
 
 [Buil a Technical Documentation Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page)
 
+### Technologies used
+
+- HTML
+- CSS
+  - SASS
+  - Bootstrap
+- JavaScript
+
 ### Additional notes
 
 [x] Build custom navigation bar and "Hamburger Menu Button" that interacts with various screen sizes.
