@@ -33,7 +33,7 @@ section h2 {
   position: fixed;
   z-index: 9;
 
-  top: 60px;
+  top: -560px;
 
   width: 100vw;
   max-width: 100%;
@@ -58,8 +58,8 @@ section h2 {
   transition: all 0.5s ease-in-out;
 }
 
-.fm-navbar.hide {
-  transform: translateY(-260px);
+.fm-navbar.show {
+  transform: translateY(620px);
 }
 
 //HAMBURGER BUTTON
@@ -108,6 +108,27 @@ section h2 {
   transform: rotate(-45deg) translate(7px, 7px);
 }
 
+p {
+  padding-left: 20px;
+}
+
+code {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #5d33f3;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+
 @media (min-width: 992px) {
   .fm-title {
     flex-direction: row-reverse;
@@ -136,8 +157,8 @@ section h2 {
     height: 100vh;
   }
 
-  .fm-navbar.hide {
-    transform: translatex(25vw);
+  .fm-navbar.show {
+    transform: translateX(25vw);
   }
 
   .fm-main-content {
@@ -157,7 +178,7 @@ section h2 {
     height: 100vh;
   }
 
-  .fm-navbar.hide {
+  .fm-navbar.show {
     transform: translatex(17vw);
   }
 

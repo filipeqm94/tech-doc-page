@@ -5,22 +5,23 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 function toggleNavbar() {
   menuBtn.classList.toggle("open");
-  navbar.classList.toggle("hide");
-  mainContent.classList.toggle("hide");
+  navbar.classList.toggle("show");
+  mainContent.classList.toggle("show");
 }
 
 function dynamicStyle() {
   if (document.body.clientWidth >= 992) {
     menuBtn.classList.add("open");
-    navbar.classList.add("hide");
-    mainContent.classList.add("hide");
+    navbar.classList.add("show");
 
     navLinks.forEach((a) => {
       a.removeEventListener("click", toggleNavbar);
     });
-  } else {
+  }
+
+  if (document.body.clientWidth < 992) {
     menuBtn.classList.remove("open");
-    mainContent.classList.remove("hide");
+    navbar.classList.remove("show");
 
     navLinks.forEach((a) => {
       a.addEventListener("click", toggleNavbar);
