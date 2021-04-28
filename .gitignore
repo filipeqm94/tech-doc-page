@@ -1,2 +1,2 @@
-*.scss
-*.map
+styles\styles.css.map
+styles\styles.scss
