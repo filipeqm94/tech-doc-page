@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a project on _Responsive Web Design_ from [freeCodeCamp](https://www.freecodecamp.org/).
+This is a project on **Responsive Web Design** from [freeCodeCamp](https://www.freecodecamp.org/).
 
 ## Purpose
 
@@ -14,4 +14,4 @@ The purpose of this project is to apply what I've learn about Reponsive Web Desi
 
 ### Additional notes
 
-[x] Build custom navigation bar that interacts with various screen sizes.
+[x] Build custom navigation bar and "Hamburger Menu Button" that interacts with various screen sizes.
